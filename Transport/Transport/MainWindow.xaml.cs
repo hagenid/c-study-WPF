@@ -34,9 +34,9 @@ namespace Transport
         {
             
             InitializeComponent();
-            cn = new SqlConnection(@"Data Source = DEMIAN - NB\VIDEOOSDB; Initial Catalog = rma; Integrated Security = True; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            cn.Open();
-            
+# cn = new SqlConnection(@"Data Source = DEMIAN - NB\VIDEOOSDB; Initial Catalog = rma; Integrated Security = True; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+# cn.Open();
+
 
         }
 
