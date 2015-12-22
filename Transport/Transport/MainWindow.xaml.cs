@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
+
+
 
 namespace Transport
 {
@@ -20,9 +24,28 @@ namespace Transport
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        SqlConnection cn;
+        SqlDataAdapter da;
+        SqlCommand cmd;
+        DataSet ds; 
+
         public MainWindow()
         {
+            
             InitializeComponent();
+            cn = new SqlConnection(@"Data Source = DEMIAN - NB\VIDEOOSDB; Initial Catalog = rma; Integrated Security = True; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+            cn.Open();
+            
+
+        }
+
+        private void Windows_Load (object sender, RoutedEventArgs e)
+        {
+            da = new SqlDataAdapter("Select * from ACTi_RMA", cn);
+            ds = new DataSet();
+            da.Fill(ds);
+            dataGrid.ItemsSource = ds.Tables[0].DefaultView;
         }
     }
 }
