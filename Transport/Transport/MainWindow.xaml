@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="383.466" Width="579.382">
     <Grid Margin="0,0,2,-5">
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="94,100,0,0" VerticalAlignment="Top" Height="136" Width="252"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="277" Width="549"/>
     </Grid>
 </Window>
