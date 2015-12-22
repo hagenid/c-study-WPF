@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Transport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="383.466" Width="579.382">
+        Title="RMA" Height="383.466" Width="579.382">
     <Grid Margin="0,0,2,-5">
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="277" Width="549"/>
     </Grid>
