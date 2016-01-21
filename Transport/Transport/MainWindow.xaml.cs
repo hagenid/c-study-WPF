@@ -14,8 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
-
-
+using System.Data.SQLite;
 
 namespace Transport
 {
@@ -49,7 +48,8 @@ namespace Transport
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            SQLiteConnection.CreateFile("D:\\data.db");
+            string databaseName = @"D:\\data.db";
         }
     }
 }
