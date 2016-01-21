@@ -34,8 +34,7 @@ namespace Transport
         {
             
             InitializeComponent();
-# cn = new SqlConnection(@"Data Source = DEMIAN - NB\VIDEOOSDB; Initial Catalog = rma; Integrated Security = True; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-# cn.Open();
+
 
 
         }
@@ -46,6 +45,11 @@ namespace Transport
             ds = new DataSet();
             da.Fill(ds);
             dataGrid.ItemsSource = ds.Tables[0].DefaultView;
+        }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
